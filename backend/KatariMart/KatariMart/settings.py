@@ -40,9 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'Mart',
-    'User',
+    'UserApp',
     'corsheaders',
 ]
+
+AUTH_USER_MODEL = 'UserApp.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

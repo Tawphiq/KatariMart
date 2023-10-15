@@ -10,26 +10,8 @@ import Footer from './Footer';
 
 
 
-const Home = ({cart, setCart}) => {
-    
-    const [products, setProducts] = useState([]); // Initialize your products here
-
-  const addToCart = (product) => {
-    console.log('Current Cart:', cart);
-
-    // Create a copy of the current cart and add the selected product to it
-    const updatedCart = [...cart, product];
-
-    console.log('Updated Cart:', updatedCart);
-
-    setCart(updatedCart);
-  };
-
-  
-
-
-
-  return (
+const Home = ({cart, setCart, addToCart}) => {
+    return (
     <div>
       <div>
         <Banner />
@@ -41,7 +23,9 @@ const Home = ({cart, setCart}) => {
         <About />
       </div>
       <div id='products' className='mb-10'>
-        <Products addToCart={addToCart} cart = {cart} />
+        <Products
+         addToCart={addToCart} 
+        />
       </div>
       <div id='contact' className='bg-gray-100 mb-10 p-10'>
         <Contact />
