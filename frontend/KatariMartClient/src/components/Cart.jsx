@@ -5,7 +5,7 @@ function Cart({ cart, removeFromCart, increaseQuantity, decreaseQuantity, cartCo
   const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   return (
-    <div className='min-h-screen bg-gray-100 grid justify-center w-screen mx-auto p-10  shadow-md'>
+    <div className='min-h-screen bg-gray-100 grid justify-center w-full mx-auto p-10  shadow-md'>
       <h1 className='text-2xl font-semibold mb-4 text-purple-600'>{cart.length > 0 ? <h1>Cart({cart.length})</h1> : <h1>Cart</h1>}</h1>
       {cart.length === 0 && <p>Your cart is empty <br /> <button className='mt-20'>Start Shopping</button></p>}
       {cart.length > 0 && (<div className='bg-white rounded shadow-md border border-purple-500 p-4'>
@@ -39,7 +39,7 @@ function Cart({ cart, removeFromCart, increaseQuantity, decreaseQuantity, cartCo
           <div className="">
             <span className='font-bold ml-16'>Subtotal: <span className='font-normal'>${total.toFixed(2)}</span></span>
           </div>
-          <button onClick={() => alert('Checkout functionality goes here')} className='bg-purple-500 w-64 text-white font-bold rounded-md shadow-md'>
+          <button  className='bg-purple-500 w-64 text-white font-bold rounded-md shadow-md'>
             Checkout(${total.toFixed(2)})
           </button>
         </div>

@@ -1,16 +1,14 @@
 import React, {useState} from 'react'
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Navbar from './Navbar';
 import Products from './Products';
 import Banner from './Banner';
 import About from './About'
 import Contact from './Contact'
 import Benifits from './Benifits'
-import Footer from './Footer';
 
 
 
-const Home = ({cart, setCart, addToCart}) => {
+
+const Home = ({addToCart}) => {
     return (
     <div>
       <div>

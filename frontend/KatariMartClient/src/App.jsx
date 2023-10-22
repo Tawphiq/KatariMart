@@ -1,14 +1,31 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import axios from 'axios';
 import Home from './components/Home';
 import Cart from './components/Cart';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Register from './components/Register';
+import SignIn from './components/SignIn';
+import Orders from './components/Orders'; 
 
 function App() {
   const [cart, setCart] = useState([]);
   const [products, setProducts] = useState([]);
-    const [cartCount, setCartCount] = useState(0);
+  const [cartCount, setCartCount] = useState(0);
+  const [orderData, setOrderData] = useState(null);
+
+  useEffect(() => {
+    // Fetch order data here, based on your API endpoint
+    axios
+      .get('http://localhost:8000/api/orders/') // Replace {orderId} with the actual order ID
+      .then((response) => {
+        setOrderData(response.data);
+      })
+      .catch((error) => {
+        console.error('Error fetching order data:', error);
+      });
+  }, []);
 
 
   const addToCart = (product) => {
@@ -54,10 +71,11 @@ function App() {
     };
 
 
+
   return (
     <div>
     <Router>
-      <Navbar cartCount={cartCount}/>
+      <Navbar cartCount={cartCount} />
         <Routes>
           <Route path="*"
            element={<Home cart = {cart} 
@@ -69,11 +87,15 @@ function App() {
           element={<Cart cart={cart} 
           removeFromCart={removeFromCart}
           increaseQuantity={increaseQuantity} 
-          decreaseQuantity = {decreaseQuantity} 
-          />} />
+          decreaseQuantity = {decreaseQuantity} />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/orders" element={<Orders />} orderData={orderData} />
         </Routes>
         <Footer />
       </Router>
+
+      
     </div>
     );
 }
