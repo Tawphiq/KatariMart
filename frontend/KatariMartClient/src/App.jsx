@@ -7,7 +7,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Register from './components/Register';
 import SignIn from './components/SignIn';
-import Orders from './components/Orders'; 
+import Orders from './components/Orders';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -81,16 +81,19 @@ function App() {
            element={<Home cart = {cart} 
            setCart = {setCart} 
            addToCart={addToCart} 
-           cartCount = {cartCount}/>} 
+           cartCount = {cartCount}/>}
             />
           <Route path="/cart" 
-          element={<Cart cart={cart} 
+          element={<Cart cart={cart}
+          setCart={setCart} 
           removeFromCart={removeFromCart}
           increaseQuantity={increaseQuantity} 
-          decreaseQuantity = {decreaseQuantity} />} />
+          decreaseQuantity = {decreaseQuantity}
+          cartCount={cartCount} setCartCount={setCartCount} />} 
+           />
           <Route path="/register" element={<Register />} />
           <Route path="/signin" element={<SignIn />} />
-          <Route path="/orders" element={<Orders />} orderData={orderData} />
+          <Route path="/orders" element={<Orders orderData={orderData} />} />
         </Routes>
         <Footer />
       </Router>
