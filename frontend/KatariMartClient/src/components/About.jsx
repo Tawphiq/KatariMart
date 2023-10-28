@@ -7,8 +7,8 @@ const About = () => {
     <div className='bg-gray-100 shadow-md'>
       <div className='lg:grid lg:grid-cols-2'>
         <div className='flex gap-4 p-5'>
-        <img src={about1} alt="" className='h-40 lg:h-60' />
-        <img src={about2} alt="" className='h-40 mt-20 lg:mt-32 lg:h-60' />
+        <img src={about1} alt="" className='h-36 lg:h-60 -mr-2' />
+        <img src={about2} alt="" className='h-36 mt-20 lg:mt-32 lg:h-60' />
         </div>
         <div className='p-5 lg:mt-32'>
           <h1 className='text-2xl font-bold'>About Our Shop</h1>

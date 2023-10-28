@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 
 function Cart({ cart, setCart, removeFromCart, increaseQuantity, decreaseQuantity, cartCount, setCartCount }) {
   const [isCheckingOut, setIsCheckingOut] = useState(false);
@@ -19,7 +20,7 @@ function Cart({ cart, setCart, removeFromCart, increaseQuantity, decreaseQuantit
       setCartCount(0);
 
       // Reset the cart (this can be done later)
-    }, 2000); // Change the delay as needed
+    }, 1000); // Change the delay as needed
   };
 
   const closeModal = () => {
@@ -38,10 +39,10 @@ function Cart({ cart, setCart, removeFromCart, increaseQuantity, decreaseQuantit
         {cart.length > 0 ? <h1>Cart({cart.length})</h1> : <h1>Cart</h1>}
       </h1>
       {cart.length === 0 && (
-        <p>
-          Your cart is empty <br />{' '}
-          <button className='mt-20'>Start Shopping</button>
-        </p>
+        <div className='mb-80 font-bold'>
+          <div className='mb-10'>Your cart is empty</div>
+          <RouterLink to='/' className='mt-20 text-sm bg-purple-500 text-white p-2 shadow-md rounded'>Start Shopping</RouterLink>
+        </div>
       )}
       {cart.length > 0 && (
         <div className='bg-white rounded shadow-md border border-purple-500 p-4'>
@@ -88,12 +89,13 @@ function Cart({ cart, setCart, removeFromCart, increaseQuantity, decreaseQuantit
                     Checkout(${total.toFixed(2)})
                   </button>
                   {isCheckoutSuccess && isModalOpen && (
-                    <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-900 bg-opacity-50">
-                      <div className="bg-white p-8 rounded-lg shadow-lg">
+                    <div className="fixed p-4 top-0 left-0 w-full h-full flex items-center justify-center bg-gray-900 bg-opacity-50">
+                      <section className="bg-white p-8 rounded-lg shadow-lg">
+                      <div className="p-8 text-center sm:p-12">
                         <p className="text-sm font-bold uppercase tracking-widest text-purple-500">
                           Your order is on the way 🎉
                         </p>
-                        <h2 className="mt-6 text-3xl font-bold">
+                        <h2 className="mt-6 text-3xl font-semibold">
                           Thanks for your purchase, we're getting it ready!
                         </h2>
                         <button
@@ -103,7 +105,8 @@ function Cart({ cart, setCart, removeFromCart, increaseQuantity, decreaseQuantit
                         >
                           close
                         </button>
-                      </div>
+                        </div>
+                      </section>
                     </div>
                   )}
                 </>
