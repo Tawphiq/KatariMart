@@ -7,7 +7,7 @@ function Product({ addToCart}) {
 
   useEffect(() => {
     axios
-      .get('http://localhost:8000/api/products')
+      .get('http://localhost:8000/api/products/')
       .then((response) => {
         setProducts(response.data);
         setLoading(false);
