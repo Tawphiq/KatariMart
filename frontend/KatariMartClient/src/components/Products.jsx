@@ -7,7 +7,7 @@ function Product({ addToCart}) {
 
   useEffect(() => {
     axios
-      .get('http://localhost:8000/api/products/')
+      .get('https://katari-watches.onrender.com/api/products/')
       .then((response) => {
         setProducts(response.data);
         setLoading(false);
@@ -44,7 +44,7 @@ function Product({ addToCart}) {
               </p>
 
               <p className="text-gray-700 text-sm md:text-lg font-semibold mb-2">
-                In Stock: <span className='text-sm font-thin md:text-lg'>{product.stock} {product.name}s</span>
+                In Stock: <span className='text-sm font-thin md:text-lg'>{product.stock} items</span>
               </p>
               <button
                 className='text-white font-bold border border-purple-500 hover:bg-white p-1 rounded shadow w-full bg-purple-500 hover:text-purple-500'
