@@ -59,7 +59,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://katari-watches.vercel.app",
+    "http://katari-watches.vercel.app",
     "http://localhost:5173",
 ]
 
