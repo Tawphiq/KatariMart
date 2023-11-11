@@ -120,16 +120,6 @@ return (
         >
           Contact Us
         </Link>
-        {/*<RouterLink
-          to="/account"
-          spy={true}
-          smooth={true}
-          duration={500}
-          className="block mt-4 lg:inline-block lg:mt-0 text-black font-bold text-lg hover:font-thin hover:border-b-2 hover:border-b-purple-700 mr-4 cursor-pointer"
-          activeClass="font-thin text-lg border-b-2 border-b-purple-700"
-        >
-          Account
-    </RouterLink>*/}
         
         <RouterLink
           to="/cart"
