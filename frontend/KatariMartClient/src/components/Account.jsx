@@ -15,22 +15,16 @@ function Account() {
   return (
     <div className="relative group">
       <button
-        className="group absolute ml-9 -top-8 w-10 h-10 bg-gray-300 hover:bg-gray-400 focus:outline-none focus:ring focus:ring-gray-400 rounded-full"
+        className="group grid grid-cols-2  w-10 h-10  focus:outline-none focus:ring rounded-full"
         onMouseEnter={toggleDropdown}
         onClick={toggleDropdown}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-6 h-6 m-2 text-gray-600 group-hover:text-gray-800"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fillRule="evenodd"
-            d="M3.293 5.293a1 1 0 011.414 0L10 10.586l5.293-5.293a1 1 0 111.414 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414z"
-            clipRule="evenodd"
-          />
-        </svg>
+        <p>Account</p>
+        <p className='-mt-4 ml-8'>
+          <svg width="64px" height="64px" viewBox="-18.72 -18.72 61.44 61.44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#0000" stroke-width="0.00024000000000000003" transform="rotate(0)matrix(1, 0, 0, 1, 0, 0)">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.144"></g><g id="SVGRepo_iconCarrier"> 
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z" fill="#000000"></path> </g></svg>
+          </p>
       </button>
       {isOpen && (
         <div
