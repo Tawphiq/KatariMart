@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
-import fevicon from '../assets/fevicon.png';
+import logo from '../assets/cover.png';
 import { Link as RouterLink } from 'react-router-dom';
 import Account from './Account';
 
@@ -27,15 +27,16 @@ const toggleNavbar = () => {
 };
 
 return (
-  <nav className="flex items-center justify-between flex-wrap p-6 sticky top-0 w-full z-10 bg-gray-300">
+  <nav className=" sticky top-0 w-full h-24 z-10 bg-gray-50">
+    <div className='flex items-center justify-between flex-wrap mb-40'>
     <RouterLink
       to='/'
       spy={true}
       smooth={true}
       duration={500} 
-      className="flex items-center flex-shrink-0  mr-6 cursor-pointer text-white  border bg-purple-500 hover:bg-white hover:text-purple-500 font-bold  hover:border-purple-500 p-2 shadow rounded-md">
-      <img src={fevicon} className="w-100 h-10 mr-2" alt="Logo" />
-      <span className=''>Katari Watch</span>
+      className="flex items-center flex-shrink-0 mr-6 cursor-pointer text-purple-500 font-bold text-md w-56  rounded p-2">
+      
+      <img src={logo} className="" alt="Logo" />
     </RouterLink>
     <div className="flex lg:hidden">
       <RouterLink
@@ -151,6 +152,7 @@ return (
           <div className=''>Account</div>
           <Account className = "" />
         </button>
+  </div>
   </div>
   </div>
   </nav>
