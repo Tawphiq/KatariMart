@@ -13,7 +13,7 @@ const About = () => {
         <img data-aos="flip-right" src={about1} alt="" className='h-36 lg:h-60 -mr-2' />
         <img data-aos="flip-left" src={about2} alt="" className='h-36 mt-20 lg:mt-32 lg:h-60' />
         </div>
-        <div className='p-5 lg:mt-32'>
+        <div data-aos="fade-left" className='p-5 lg:mt-32'>
           <h1 className='text-2xl font-bold'>About Our Shop</h1>
           <p className='mt-2'>At Katari Watches, our passion for horology knows no bounds. 
             We're more than just a retailer; we're dedicated timepiece enthusiasts who curate a collection of watches that tell a story of craftsmanship and sophistication.</p>
