@@ -39,14 +39,12 @@ function Product({ addToCart}) {
                 src={product.image}
                 alt={product.name}
                 className="w-full h-32 object-contain mb-2"
+                
               />
               <h2 className="text-lg font-semibold md:font-bold md:text-xl mb-2 text-purple-500">
                 {product.name}
               </h2>
-              <p className="text-gray-700 text-sm md:text-lg font-semibold mb-2">
-                Price: <span className='text-sm font-thin md:text-lg'>${product.price}</span>
-              </p>
-
+              <p className="text-gray-700 text-sm md:text-lg font-semibold mb-2">Price: <span className='text-sm font-thin md:text-lg'>${product.price}</span></p>
               <p className="text-gray-700 text-sm md:text-lg font-semibold mb-2">
                 In Stock: <span className='text-sm font-thin md:text-lg'>{product.stock} items</span>
               </p>
