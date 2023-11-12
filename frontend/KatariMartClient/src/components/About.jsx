@@ -1,6 +1,8 @@
 import React from 'react'
 import about1 from '../assets/about1.jpg'
 import about2 from '../assets/about2.jpg'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const About = () => {
   return (
