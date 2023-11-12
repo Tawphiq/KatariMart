@@ -10,7 +10,7 @@ const Banner = () => {
   useEffect(() => {AOS.init({duration: 2000})}, [])
   return (
     <div className='bg-[url(./assets/slider-bg.jpg)] text-white h-96 bg-cover lg:bg-contain lg:h-screen lg:bg-no-repeat'>
-      <h1 className='text-4xl text-white font-bold font-sans flex justify-center lg:text-5xl lg:justify-start px-20'><span className='mt-20 lg:mt-40'>STYLE WATCHES</span></h1>
+      <h1 className='text-4xl text-white font-bold font-sans flex justify-center lg:text-5xl lg:justify-start px-20'><span data-aos="fade-down-right" className='mt-20 lg:mt-40'>STYLE WATCHES</span></h1>
       <p className='flex px-20 py-5 font-semibold'>Elevate Your Style with Exquisite Timepieces - Explore Our Online Watch Shop Today!</p>
       
       <div className='flex gap-2 justify-center mt-10 lg:justify-start lg:px-20'>
