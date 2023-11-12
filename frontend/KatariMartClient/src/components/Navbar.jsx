@@ -27,7 +27,7 @@ const toggleNavbar = () => {
 };
 
 return (
-  <nav className=" sticky top-0 w-full h-24 z-10 bg-gray-50 font-mono text-gray-700">
+  <nav className=" sticky top-0 w-full h-24 z-10 bg-gray-50 font-mono text-gray-600">
     <div className='flex items-center justify-between flex-wrap mb-40 lg:-mr-20 mr-8'>
     <RouterLink
       to='/'

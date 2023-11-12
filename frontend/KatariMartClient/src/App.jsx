@@ -73,7 +73,7 @@ function App() {
 
 
   return (
-    <div>
+    <div className='font-mono'>
     <Router>
       <Navbar cartCount={cartCount} />
         <Routes>

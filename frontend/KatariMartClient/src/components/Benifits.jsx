@@ -11,7 +11,7 @@ import 'aos/dist/aos.css';
 const Benifits = () => {
     useEffect(() => {AOS.init({duration: 2000})}, [])
   return (
-    <div className='grid lg:grid-cols-4 justify-center my-20 lg:my-10 lg:mt-1 gap-20 font-bold bg-gray-200 font-mono'>
+    <div className='grid lg:grid-cols-4 justify-center my-20 lg:my-10 lg:mt-1 gap-20 font-bold bg-gray-200 font-mono text-gray-600'>
         <div data-aos="fade-right" className='grid justify-center gap-2 text-xl mt-10 lg:mb-10'>
             <img src={delivery} alt="" className='ml-10 h-16' />
             <p>FAST DELIVERY</p>

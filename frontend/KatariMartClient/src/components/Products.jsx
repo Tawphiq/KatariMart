@@ -22,7 +22,7 @@ function Product({ addToCart}) {
   }, []);
 
   return (
-    <div className="bg-gray-100 w-full container mx-auto py-4">
+    <div className="bg-gray-100 w-full container mx-auto py-4 font-mono">
       <h1 className="text-4xl font-semibold mb-4 text-purple-600 lg:ml-16 lg:mt-10">Products</h1>
 
       {loading ? (
