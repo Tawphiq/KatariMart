@@ -7,7 +7,7 @@ import 'aos/dist/aos.css';
 const About = () => {
   useEffect(() => {AOS.init({duration: 2000})}, [])
   return (
-    <div className='bg-gray-100 shadow-md'>
+    <div className='bg-gray-100'>
       <div className='lg:grid lg:grid-cols-2'>
         <div className='flex gap-4 p-5'>
         <img data-aos="flip-right" src={about1} alt="" className='h-36 lg:h-60 -mr-2' />
