@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Product({ addToCart}) {
   const [products, setProducts] = useState([]);
@@ -16,6 +18,7 @@ function Product({ addToCart}) {
         console.error('Error fetching products:', error);
         setLoading(false);
       });
+      {AOS.init({duration: 2000})};
   }, []);
 
   return (
@@ -30,6 +33,7 @@ function Product({ addToCart}) {
             <div
               key={product.id}
               className="bg-white p-4 shadow-md rounded-lg border-2 border-purple-500"
+              data-aos="fade-left"
             >
               <img
                 src={product.image}
