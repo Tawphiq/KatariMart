@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Contact() {
     const validationSchema = Yup.object({
@@ -40,8 +42,10 @@ function Contact() {
         },
     });
 
+    useEffect(() => {AOS.init({duration: 2000})}, [])
+
     return (
-        <div className="max-w-md mx-auto p-4 bg-white shadow-md rounded border-2 border-purple-500">
+        <div data-aos="fade-up" className="max-w-md mx-auto p-4 bg-white shadow-md rounded border-2 border-purple-500">
             <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
             <form onSubmit={formik.handleSubmit}>
                 <div className="mb-4">
