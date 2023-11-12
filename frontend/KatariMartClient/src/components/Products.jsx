@@ -49,7 +49,7 @@ function Product({ addToCart}) {
                 In Stock: <span className='text-sm font-thin md:text-lg'>{product.stock} items</span>
               </p>
               <button
-                className='text-white font-bold border border-purple-500 hover:bg-white p-1 rounded shadow w-full bg-purple-500 hover:text-purple-500'
+                className='text-white font-bold border border-purple-500 hover:bg-white p-1 rounded shadow w-full bg-purple-500 hover:text-purple-500 font-sans'
                 onClick={() => addToCart(product)}
               >
                 Add to Cart
