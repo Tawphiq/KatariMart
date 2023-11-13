@@ -34,14 +34,14 @@ function Cart({ cart, setCart, removeFromCart, increaseQuantity, decreaseQuantit
   };
 
   return (
-    <div className='min-h-screen bg-gray-100 grid justify-center w-full mx-auto p-10 shadow-md'>
+    <div className='min-h-screen bg-gray-100 grid justify-center w-full mx-auto p-10 font-sans shadow-md'>
       <h1 className='text-2xl font-semibold mb-4 text-purple-600'>
-        {cart.length > 0 ? <h1>Cart({cart.length})</h1> : <h1>Cart</h1>}
+        {cart.length > 0 ? <h1>Cart({cart.length})</h1> : <h1 className='ml-8'>Cart</h1>}
       </h1>
       {cart.length === 0 && (
-        <div className='mb-80 font-bold'>
+        <div className='mb-96 lg:mb-80 font-bold'>
           <div className='mb-10'>Your cart is empty</div>
-          <RouterLink to='/' className='mt-20 text-sm bg-purple-500 text-white p-2 shadow-md rounded'>Start Shopping</RouterLink>
+          <RouterLink to='/' className='lg:mt-20 text-sm bg-purple-500 text-white p-2 shadow-md rounded'>Start Shopping</RouterLink>
         </div>
       )}
       {cart.length > 0 && (
