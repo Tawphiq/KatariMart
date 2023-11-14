@@ -143,7 +143,7 @@ function Product({ addToCart }) {
       <div
         className={`${
           showAlert ? 'block' : 'hidden'
-        } font-regular fixed bottom-10 right-10 mb-4 mr-4 bg-green-500 p-4 text-base leading-5 text-white rounded-lg`}
+        } font-regular fixed bottom-0 right-0 mb-4 mr-4 bg-green-500 p-4 text-base leading-5 text-white rounded-lg`}
       >
         {alertMessage}
       </div>
