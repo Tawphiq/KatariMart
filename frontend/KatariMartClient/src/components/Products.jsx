@@ -67,6 +67,8 @@ export default Product;*/}
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Product({ addToCart }) {
   const [products, setProducts] = useState([]);
@@ -99,6 +101,8 @@ function Product({ addToCart }) {
     }, 3000);
   };
 
+  useEffect(() => {AOS.init({duration: 2000})}, [])
+
   return (
     <div className="bg-gray-100 w-full container mx-auto py-4 font-mono">
       <h1 className="lg:text-4xl text-2xl ml-8 font-semibold mb-4 text-purple-600 lg:ml-16 lg:mt-10">Products</h1>
@@ -111,6 +115,7 @@ function Product({ addToCart }) {
             <div
               key={product.id}
               className="bg-white p-4 shadow-md rounded-lg border-2 border-purple-500"
+              data-aos="fade-left"
             >
               <img
                 src={product.image}
@@ -138,7 +143,7 @@ function Product({ addToCart }) {
       <div
         className={`${
           showAlert ? 'block' : 'hidden'
-        } font-regular fixed bottom-0 right-0 mb-4 mr-4 bg-green-500 p-4 text-base leading-5 text-white rounded-lg`}
+        } font-regular fixed bottom-10 right-10 mb-4 mr-4 bg-green-500 p-4 text-base leading-5 text-white rounded-lg`}
       >
         {alertMessage}
       </div>
