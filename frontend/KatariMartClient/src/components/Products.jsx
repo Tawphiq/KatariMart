@@ -48,7 +48,7 @@ function Product({ addToCart }) {
             <div
               key={product.id}
               className="bg-white p-4 shadow-md rounded-lg border-2 border-purple-500"
-              data-aos="fade-left"
+              //data-aos="fade-left"
             >
               <img
                 src={product.image}
